@@ -105,9 +105,9 @@ cinemas
             └── payments
 ```
 
-## Hướng dẫn cài đặt
+## Hướng dẫn 
 
-### Yêu cầu hệ thống
+### Yêu cầu 
 - Node.js >= 18
 - Microsoft SQL Server Express + SSMS 22
 - Git
@@ -172,13 +172,21 @@ npm install
 ### Bước 7 — Chạy project
 
 Chạy 2 terminal nhé:
+
 ter1:
+
+```bash
 cd server
 npm run dev
+```
 
 ter2:
+
+```bash
 cd client
 npm run dev
+```
+
 # ✅ Web chay tai: http://localhost:3000
 
 
