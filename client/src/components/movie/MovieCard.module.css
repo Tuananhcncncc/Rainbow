@@ -1,0 +1,194 @@
+/* =========================
+   Card
+========================= */
+.card {
+  background: white;
+
+  border-radius: 14px;
+  overflow: hidden;
+
+  box-shadow: 0 4px 16px rgba(0, 0, 0, .08);
+
+  transition:
+    transform .2s,
+    box-shadow .2s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 12px 32px rgba(0, 0, 0, .15);
+}
+
+
+/* =========================
+   Poster
+========================= */
+.poster {
+  position: relative;
+
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+.poster img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform .3s;
+}
+
+.card:hover .poster img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   Overlay
+========================= */
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0, 0, 0, .55);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0;
+
+  transition: opacity .2s;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+
+/* =========================
+   Trailer Button
+========================= */
+.trailerBtn {
+  padding: 10px 20px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, .9);
+  color: #0a0a0f;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   Badge
+========================= */
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  padding: 3px 8px;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  color: white;
+}
+
+
+/* =========================
+   Info
+========================= */
+.info {
+  padding: 14px;
+}
+
+
+/* =========================
+   Title
+========================= */
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+
+  margin-bottom: 4px;
+
+  cursor: pointer;
+}
+
+.title:hover {
+  color: #7b2fff;
+}
+
+
+/* =========================
+   Meta
+========================= */
+.meta {
+  font-size: 11px;
+  color: #9999b8;
+
+  margin-bottom: 4px;
+}
+
+
+/* =========================
+   Book Button
+========================= */
+.bookBtn {
+  width: 100%;
+
+  margin-top: 10px;
+  padding: 10px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  color: white;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.bookBtn:hover {
+  opacity: .9;
+}
+
+
+/* =========================
+   Coming Soon
+========================= */
+.soon {
+  width: 100%;
+
+  margin-top: 10px;
+  padding: 10px;
+
+  border-radius: 8px;
+
+  background: #f0f0f8;
+  color: #9999b8;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-align: center;
+}

@@ -1,0 +1,182 @@
+.page { padding: 28px; }
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.date { color: #9999b8; font-size: 13px; }
+
+/* 2 cột thay vì 3 */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.statCard {
+  background: white;
+  border-radius: 14px;
+  border: 1.5px solid #e8e8f4;
+  border-top: 3px solid;
+  padding: 20px;
+  position: relative;
+}
+
+.statIcon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 28px;
+  opacity: .15;
+}
+
+.statValue {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: #9999b8;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.mainGrid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  border: 1.5px solid #e8e8f4;
+  padding: 20px;
+}
+
+.cardTitle { font-weight: 700; font-size: 15px; margin-bottom: 16px; }
+
+/* Bar chart */
+.chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 140px;
+}
+
+.bar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  height: 100%;
+}
+
+.barFill {
+  width: 100%;
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  border-radius: 6px 6px 0 0;
+  min-height: 4px;
+  transition: height .3s;
+}
+
+.barLabel { font-size: 10px; color: #9999b8; }
+
+/* Top movies */
+.topList { display: flex; flex-direction: column; gap: 10px; }
+
+.topItem { display: flex; align-items: center; gap: 12px; }
+
+.topRank {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  width: 32px;
+  flex-shrink: 0;
+}
+
+.topInfo { flex: 1; }
+.topName { font-size: 13px; font-weight: 600; }
+.topMeta { font-size: 11px; color: #9999b8; }
+
+.topRev {
+  font-size: 13px;
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+}
+
+/* Table */
+.table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.table th {
+  text-align: left;
+  padding: 0 8px 10px;
+  color: #9999b8;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+  border-bottom: 1px solid #f0f0f8;
+}
+.table td { padding: 8px; border-bottom: 1px solid #f8f8fc; }
+.truncate { max-width: 120px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+.stBadge { padding: 2px 8px; border-radius: 20px; font-size: 10px; font-weight: 600; }
+.stBadge[data-s="confirmed"] { background: #dcfce7; color: #16a34a; }
+.stBadge[data-s="pending"]   { background: #fef3c7; color: #d97706; }
+.stBadge[data-s="cancelled"] { background: #fee2e2; color: #dc2626; }
+
+/* Schedule */
+.schedList { display: flex; flex-direction: column; gap: 12px; }
+
+.schedItem { display: flex; gap: 12px; align-items: flex-start; }
+
+.schedTime {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  width: 48px;
+  flex-shrink: 0;
+  color: #7b2fff;
+}
+
+.schedInfo { flex: 1; }
+.schedName { font-size: 13px; font-weight: 600; margin-bottom: 4px; }
+
+.schedBar {
+  height: 4px;
+  background: #f0f0f8;
+  border-radius: 2px;
+  margin-bottom: 3px;
+}
+.schedFill {
+  height: 100%;
+  background: linear-gradient(90deg, #ff4d6d, #7b2fff);
+  border-radius: 2px;
+}
+
+.schedMeta { font-size: 11px; color: #9999b8; }

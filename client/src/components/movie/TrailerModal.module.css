@@ -1,0 +1,125 @@
+/* =========================
+   Overlay
+========================= */
+.overlay {
+  position: fixed;
+  inset: 0;
+
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(0, 0, 0, .85);
+
+  animation: fi .2s ease;
+}
+
+
+/* =========================
+   Fade In Animation
+========================= */
+@keyframes fi {
+
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+
+}
+
+
+/* =========================
+   Modal Box
+========================= */
+.box {
+  width: 100%;
+  max-width: 860px;
+
+  overflow: hidden;
+
+  background: #0a0a0f;
+
+  border-radius: 16px;
+
+  animation: su .25s ease;
+}
+
+
+/* =========================
+   Scale Up Animation
+========================= */
+@keyframes su {
+
+  from {
+    transform: scale(.95);
+  }
+
+  to {
+    transform: scale(1);
+  }
+
+}
+
+
+/* =========================
+   Header
+========================= */
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 16px 20px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, .1);
+}
+
+.head h3 {
+  color: white;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.head button {
+  background: none;
+  border: none;
+
+  padding: 4px;
+
+  color: rgba(255, 255, 255, .6);
+
+  font-size: 20px;
+
+  cursor: pointer;
+}
+
+.head button:hover {
+  color: white;
+}
+
+
+/* =========================
+   Video Wrapper
+========================= */
+.videoWrap {
+  position: relative;
+
+  height: 0;
+  padding-bottom: 56.25%;
+}
+
+.videoWrap iframe {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}

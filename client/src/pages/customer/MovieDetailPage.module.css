@@ -1,0 +1,221 @@
+.page { min-height: 100vh; }
+
+/* ── HERO ──────────────────────────────────────────────────── */
+.hero {
+  position: relative;
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(0,0,0,.92) 50%, rgba(0,0,0,.6));
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  padding: 60px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.poster {
+  width: 220px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+}
+
+.heroInfo { flex: 1; color: white; }
+
+.badges {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.ratingBadge {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  color: white;
+}
+
+.formatBadge {
+  padding: 4px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(255,255,255,.15);
+  color: rgba(255,255,255,.9);
+}
+
+.title {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 44px;
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: 0px;
+  margin-bottom: 6px;
+}
+
+.titleEn {
+  color: rgba(255,255,255,.5);
+  font-size: 18px;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.meta {
+  display: flex;
+  gap: 20px;
+  color: rgba(255,255,255,.65);
+  font-size: 14px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.desc {
+  color: rgba(255,255,255,.75);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 28px;
+}
+
+.actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+.trailerBtn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,.4);
+  background: transparent;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.trailerBtn:hover { background: rgba(255,255,255,.1); border-color: white; }
+
+.bookBtn {
+  padding: 12px 28px;
+  border-radius: 10px;
+  border: none;
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all .2s;
+}
+.bookBtn:hover { opacity: .9; transform: translateY(-1px); }
+
+/* ── SHOWTIMES ─────────────────────────────────────────────── */
+.section { padding: 48px 0 64px; }
+
+.sectionTitle {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: 0px;
+  margin-bottom: 24px;
+}
+
+.datePicker {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.dateBtn {
+  padding: 10px 18px;
+  border-radius: 10px;
+  border: 1.5px solid #e8e8f4;
+  background: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #6b6b8a;
+  transition: all .2s;
+}
+.dateBtn:hover { border-color: #7b2fff; color: #7b2fff; }
+.dateActive {
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  color: white !important;
+  border-color: transparent !important;
+}
+
+.cinemaGroup {
+  background: white;
+  border-radius: 14px;
+  border: 1.5px solid #e8e8f4;
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+
+.cinemaHeader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f0f0f8;
+}
+.cinemaIcon { font-size: 24px; }
+.cinemaName { font-weight: 700; font-size: 16px; }
+.cinemaDistrict { font-size: 12px; color: #9999b8; margin-top: 2px; }
+
+.timeGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px 20px;
+}
+
+.timeBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 10px;
+  border: 1.5px solid #e8e8f4;
+  background: white;
+  cursor: pointer;
+  transition: all .2s;
+  min-width: 110px;
+}
+.timeBtn:hover { border-color: #7b2fff; background: #f5f3ff; }
+
+.timeMain {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #0a0a0f;
+}
+.timeSub { font-size: 10px; color: #9999b8; margin-top: 2px; }
+.timePrice { font-size: 11px; color: #7b2fff; font-weight: 700; margin-top: 4px; }
+
+.noShowtime {
+  text-align: center;
+  padding: 40px;
+  color: #9999b8;
+  font-size: 15px;
+}
+
+@media(max-width: 768px) {
+  .heroContent { flex-direction: column; padding: 24px; }
+  .poster { width: 150px; }
+  .title { font-size: 28px; }
+}

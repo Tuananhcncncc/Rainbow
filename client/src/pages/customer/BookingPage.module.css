@@ -1,0 +1,450 @@
+/* =========================
+   Layout chính
+========================= */
+.page {
+  display: flex;
+  gap: 24px;
+  padding: 32px 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: calc(100vh - 64px);
+}
+
+.main {
+  flex: 1;
+  overflow-x: auto;
+}
+
+
+/* =========================
+   Screen
+========================= */
+.screen {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.screenLine {
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7b2fff,
+    #ff4d6d,
+    #7b2fff,
+    transparent
+  );
+  border-radius: 2px;
+  margin-bottom: 8px;
+}
+
+.screen span {
+  font-size: 11px;
+  color: #9999b8;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+
+/* =========================
+   Seat Map
+========================= */
+.seatMap {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  padding: 0 16px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rowLabel {
+  width: 22px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 700;
+  color: #9999b8;
+  flex-shrink: 0;
+}
+
+.rowSeats {
+  display: flex;
+  gap: 5px;
+  flex-wrap: nowrap;
+}
+
+
+/* =========================
+   Ghế - Base
+========================= */
+.seat {
+  width: 38px;
+  height: 38px;
+
+  border-radius: 6px 6px 4px 4px;
+  border: 1.5px solid #d1d5db;
+
+  background: #f3f4f6;
+  color: #6b7280;
+
+  font-size: 8px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all .15s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+  position: relative;
+}
+
+.seat::before {
+  content: '';
+
+  position: absolute;
+  bottom: -3px;
+  left: 4px;
+  right: 4px;
+
+  height: 3px;
+
+  background: #d1d5db;
+  border-radius: 0 0 3px 3px;
+}
+
+.seatCode {
+  font-size: 7.5px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+
+/* =========================
+   Trạng thái ghế
+========================= */
+
+/* Ghế Available */
+.seat.available {
+  background: #f0f0f8;
+  border-color: #c4b5fd;
+  color: #7b2fff;
+}
+
+.seat.available::before {
+  background: #c4b5fd;
+}
+
+.seat.available:hover {
+  background: #ede9fe;
+  border-color: #7b2fff;
+  transform: scale(1.1);
+}
+
+
+/* Ghế VIP */
+.seat.vip {
+  background: #fef3c7;
+  border-color: #f59e0b;
+  color: #92400e;
+}
+
+.seat.vip::before {
+  background: #f59e0b;
+}
+
+.seat.vip:hover {
+  background: #fde68a;
+  border-color: #d97706;
+  transform: scale(1.1);
+}
+
+
+/* Ghế Selected */
+.seat.selected {
+  background: linear-gradient(135deg, #4cc9f0, #7b2fff);
+  border-color: #7b2fff;
+  color: white;
+}
+
+.seat.selected::before {
+  background: #7b2fff;
+}
+
+
+/* Ghế Locked */
+.seat.locked {
+  background: #fef3c7;
+  border-color: #fbbf24;
+  color: #92400e;
+
+  cursor: not-allowed;
+  opacity: .8;
+}
+
+.seat.locked::before {
+  background: #fbbf24;
+}
+
+
+/* Ghế Booked */
+.seat.booked {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  color: #b91c1c;
+
+  cursor: not-allowed;
+  opacity: .7;
+}
+
+.seat.booked::before {
+  background: #fca5a5;
+}
+
+
+/* =========================
+   Legend
+========================= */
+.legend {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  margin-top: 32px;
+  padding: 16px;
+
+  background: white;
+  border-radius: 12px;
+  border: 1px solid #f0f0f8;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 12px;
+  color: #6b6b8a;
+}
+
+.legendBox {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 5px 5px 3px 3px;
+  border: 1.5px solid;
+
+  position: relative;
+}
+
+.legendBox::after {
+  content: '';
+
+  position: absolute;
+  bottom: -3px;
+  left: 3px;
+  right: 3px;
+
+  height: 3px;
+
+  border-radius: 0 0 2px 2px;
+  background: inherit;
+
+  filter: brightness(.8);
+}
+
+
+/* Legend Available */
+.legendBox.available {
+  background: #f0f0f8;
+  border-color: #c4b5fd;
+}
+
+
+/* Legend VIP */
+.legendBox.vip {
+  background: #fef3c7;
+  border-color: #f59e0b;
+}
+
+
+/* Legend Selected */
+.legendBox.selected {
+  background: linear-gradient(135deg, #4cc9f0, #7b2fff);
+  border-color: #7b2fff;
+}
+
+
+/* Legend Locked */
+.legendBox.locked {
+  background: #fef3c7;
+  border-color: #fbbf24;
+}
+
+
+/* Legend Booked */
+.legendBox.booked {
+  background: #fee2e2;
+  border-color: #fca5a5;
+}
+
+
+/* =========================
+   Sidebar
+========================= */
+.sidebar {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.infoCard {
+  background: white;
+
+  border-radius: 16px;
+  border: 1.5px solid #e8e8f4;
+
+  overflow: hidden;
+
+  position: sticky;
+  top: 80px;
+}
+
+.moviePoster {
+  width: 100%;
+  height: 160px;
+
+  object-fit: cover;
+  display: block;
+}
+
+.infoBody {
+  padding: 16px;
+}
+
+.movieTitle {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.3;
+
+  margin-bottom: 14px;
+}
+
+.infoRows {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  padding-bottom: 14px;
+  margin-bottom: 14px;
+
+  border-bottom: 1px solid #f0f0f8;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+
+  font-size: 13px;
+}
+
+.infoRow span {
+  color: #9999b8;
+  flex-shrink: 0;
+}
+
+.infoRow b {
+  font-weight: 600;
+  text-align: right;
+}
+
+.selectedSeats {
+  color: #7b2fff;
+}
+
+
+/* =========================
+   Tổng tiền
+========================= */
+.total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 14px;
+}
+
+.total span {
+  color: #6b6b8a;
+  font-size: 14px;
+}
+
+.total b {
+  font-size: 20px;
+
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* =========================
+   Button
+========================= */
+.nextBtn {
+  width: 100%;
+  padding: 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  color: white;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.nextBtn:disabled {
+  opacity: .4;
+  cursor: not-allowed;
+}
+
+.nextBtn:not(:disabled):hover {
+  opacity: .9;
+}
+
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 900px) {
+
+  .page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .infoCard {
+    position: static;
+  }
+
+}

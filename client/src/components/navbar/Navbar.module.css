@@ -1,0 +1,254 @@
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 900;
+  background: #0a0a0f;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  height: 64px;
+}
+
+.inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.spacer { height: 64px; }
+
+/* ── LOGO ─────────────────────────────────────────────────── */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.logoIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 20px;
+  font-weight: 900;
+  color: white;
+}
+
+.logoName {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 18px;
+  letter-spacing: 2px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ff4d6d, #ff8c42, #ffd60a, #06d6a0, #4cc9f0, #7b2fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logoCin {
+  font-size: 9px;
+  color: rgba(255,255,255,.4);
+  letter-spacing: 4px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ── NAV LINKS ────────────────────────────────────────────── */
+.links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.link {
+  padding: 8px 14px;
+  color: rgba(255,255,255,.6);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all .18s;
+}
+
+.link:hover {
+  color: white;
+  background: rgba(255,255,255,.08);
+}
+
+.link.active {
+  color: white;
+  background: rgba(123,47,255,.3);
+  border: 1px solid rgba(123,47,255,.5);
+}
+
+/* ── RIGHT SIDE ───────────────────────────────────────────── */
+.right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-left: auto;
+}
+
+/* Auth buttons */
+.authBtns { display: flex; gap: 10px; }
+
+.loginBtn {
+  padding: 8px 18px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,.25);
+  border-radius: 8px;
+  transition: all .18s;
+}
+.loginBtn:hover { border-color: white; }
+
+.regBtn {
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: opacity .18s;
+}
+.regBtn:hover { opacity: .9; }
+
+/* User menu */
+.userWrap { position: relative; }
+
+.userBtn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 10px;
+  padding: 6px 12px 6px 6px;
+  cursor: pointer;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background .18s;
+}
+.userBtn:hover { background: rgba(255,255,255,.13); }
+
+.av {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+  font-size: 13px;
+}
+
+/* Dropdown */
+.drop {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  width: 210px;
+  background: #13131a;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.5);
+  animation: di .15s ease;
+  z-index: 999;
+}
+
+@keyframes di {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.dropHead {
+  padding: 14px 16px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.dropHead b { color: white; font-size: 13px; }
+.dropHead span { color: rgba(255,255,255,.4); font-size: 11px; }
+
+.dropItem {
+  display: block;
+  padding: 10px 16px;
+  color: rgba(255,255,255,.8);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  transition: background .15s;
+}
+.dropItem:hover { background: rgba(255,255,255,.06); }
+
+.dropOut {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  color: #ff4d6d;
+  font-size: 13px;
+  font-weight: 500;
+  text-align: left;
+  background: none;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,.06);
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  transition: background .15s;
+}
+.dropOut:hover { background: rgba(255,77,109,.08); }
+
+/* ── HAMBURGER (mobile) ───────────────────────────────────── */
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+.burger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: rgba(255,255,255,.8);
+  border-radius: 2px;
+  transition: all .2s;
+}
+
+/* ── RESPONSIVE ───────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .links {
+    display: none;
+    position: fixed;
+    top: 64px;
+    left: 0; right: 0;
+    background: #0a0a0f;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+    gap: 4px;
+  }
+  .links.open { display: flex; }
+  .burger { display: flex; }
+  .loginBtn span { display: none; }
+}

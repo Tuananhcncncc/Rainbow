@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Nunito', sans-serif;
+  background: #f8f8fc;
+  color: #0a0a0f;
+  min-height: 100vh;
+}
+:root {
+  --grad: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  --nav: #0a0a0f;
+  --border: #e8e8f4;
+  --muted: #9999b8;
+  --card: #ffffff;
+  --radius: 12px;
+  /* Font heading dùng Segoe UI thay Bebas Neue */
+  --font-heading: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-thumb { background: #7b2fff; border-radius: 3px; }
+.page-container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.spinner {
+  width: 36px; height: 36px;
+  border: 3px solid #e8e8f4;
+  border-top-color: #7b2fff;
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  margin: 60px auto;
+}
+@keyframes spin { to { transform: rotate(360deg); } }

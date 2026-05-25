@@ -1,0 +1,168 @@
+/* =========================
+   Page
+========================= */
+.page {
+  min-height: calc(100vh - 64px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 24px;
+}
+
+
+/* =========================
+   Card
+========================= */
+.card {
+  background: white;
+
+  border-radius: 24px;
+
+  padding: 56px 48px;
+
+  text-align: center;
+
+  max-width: 480px;
+  width: 100%;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .1);
+}
+
+
+/* =========================
+   Icon
+========================= */
+.icon {
+  font-size: 72px;
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   Title & Subtitle
+========================= */
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 40px;
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sub {
+  color: #6b6b8a;
+  font-size: 15px;
+
+  margin-bottom: 28px;
+}
+
+
+/* =========================
+   Code Box
+========================= */
+.codeBox {
+  background: linear-gradient(135deg, #f5f3ff, #fce7f3);
+
+  border-radius: 14px;
+
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.codeBox span {
+  display: block;
+
+  font-size: 12px;
+  color: #9999b8;
+
+  margin-bottom: 6px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.codeBox b {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 28px;
+  letter-spacing: 3px;
+
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* =========================
+   Note
+========================= */
+.note {
+  font-size: 13px;
+  color: #9999b8;
+
+  margin-bottom: 32px;
+}
+
+
+/* =========================
+   Buttons Wrapper
+========================= */
+.btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+
+/* =========================
+   Primary Button
+========================= */
+.primaryBtn {
+  padding: 14px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  color: white;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+
+/* =========================
+   Secondary Button
+========================= */
+.secondaryBtn {
+  padding: 14px;
+
+  border: 1.5px solid #e8e8f4;
+  border-radius: 12px;
+
+  background: white;
+  color: #6b6b8a;
+
+  font-family: 'Nunito', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.secondaryBtn:hover {
+  border-color: #7b2fff;
+  color: #7b2fff;
+}

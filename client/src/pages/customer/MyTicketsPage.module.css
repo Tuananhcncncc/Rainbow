@@ -1,0 +1,185 @@
+/* =========================
+   Page
+========================= */
+.page {
+  padding: 40px 0 64px;
+}
+
+
+/* =========================
+   Title
+========================= */
+.title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  margin-bottom: 32px;
+}
+
+
+/* =========================
+   Grid
+========================= */
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+
+/* =========================
+   Ticket Card
+========================= */
+.ticket {
+  display: flex;
+
+  background: white;
+
+  border-radius: 16px;
+  border: 1.5px solid #e8e8f4;
+
+  overflow: hidden;
+
+  cursor: pointer;
+  transition: all .2s;
+}
+
+.ticket:hover {
+  box-shadow: 0 8px 32px rgba(123, 47, 255, .12);
+  border-color: #c4b5fd;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   Ticket Left
+========================= */
+.ticketLeft img {
+  width: 90px;
+  height: 100%;
+
+  object-fit: cover;
+  display: block;
+}
+
+
+/* =========================
+   Ticket Right
+========================= */
+.ticketRight {
+  flex: 1;
+  padding: 16px 20px;
+}
+
+
+/* =========================
+   Ticket Content
+========================= */
+.ticketTitle {
+  font-weight: 700;
+  font-size: 16px;
+
+  margin-bottom: 8px;
+}
+
+.ticketMeta {
+  font-size: 13px;
+  color: #6b6b8a;
+
+  margin-bottom: 4px;
+}
+
+
+/* =========================
+   Ticket Footer
+========================= */
+.ticketFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 12px;
+}
+
+
+/* =========================
+   Amount
+========================= */
+.amount {
+  font-size: 18px;
+
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+
+/* =========================
+   Status
+========================= */
+.status {
+  padding: 4px 12px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+/* =========================
+   Ticket Code
+========================= */
+.code {
+  font-size: 11px;
+  color: #c4b5fd;
+
+  margin-top: 6px;
+
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   Empty State
+========================= */
+.empty {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.emptyIcon {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.empty p {
+  color: #9999b8;
+  font-size: 16px;
+
+  margin-bottom: 20px;
+}
+
+
+/* =========================
+   Empty Button
+========================= */
+.empty button {
+  padding: 12px 28px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: linear-gradient(135deg, #ff4d6d, #7b2fff);
+  color: white;
+
+  font-family: 'Nunito', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+
+  cursor: pointer;
+}
