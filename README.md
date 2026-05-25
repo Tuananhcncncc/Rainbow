@@ -49,6 +49,8 @@ Hệ thống đặt vé xem phim trực tuyến — Movies. Moments. Memories.
 ---
 
 ## Cấu trúc thư mục
+
+```txt
 rainbow-cinemas/
 ├── client/                        # Frontend React + Vite
 │   └── src/
@@ -62,38 +64,46 @@ rainbow-cinemas/
 │       │   └── admin/             # Dashboard, Movies, Showtimes,
 │       │                          # Bookings, Customers
 │       ├── services/              # Axios API calls
-│       ├── store/                 # Zustand (authStore, bookingStore)
+│       ├── store/                 # Zustand
 │       ├── socket/                # Socket.IO client
 │       └── utils/                 # format tiền, ngày, giờ
 │
 ├── server/                        # Backend Node.js + Express
 │   └── src/
-│       ├── controllers/           # authController, movieController...
-│       ├── routes/                # auth, movies, showtimes, bookings...
-│       ├── middlewares/           # JWT auth, adminOnly
-│       ├── sockets/               # seatSocket (lock/release realtime)
-│       ├── services/              # tmdbService
-│       └── config/                # db.js (kết nối MSSQL)
+│       ├── controllers/
+│       ├── routes/
+│       ├── middlewares/
+│       ├── sockets/
+│       ├── services/
+│       └── config/
 │
 ├── database/
-│   ├── 01_schema.sql              # Tạo 11 bảng
-│   ├── 02_seed.sql                # Dữ liệu mẫu
-│   └── 03_generate_seats.js      # Tạo ~900 ghế tự động
+│   ├── 01_schema.sql
+│   ├── 02_seed.sql
+│   └── 03_generate_seats.js
 │
-├── .env.example                   # Mẫu biến môi trường
+├── .env.example
 ├── .gitignore
 └── README.md
+```
 
----
 
-## Sơ đồ Database (11 bảng)
-cinemas → rooms → seats
-└── showtimes → movies
-└── bookings → users
-├── booking_seats → seats
-├── booking_combos → combos
-└── payments
----
+## Sơ đồ Database
+
+```txt
+cinemas
+└── rooms
+    ├── seats
+    └── showtimes
+        ├── movies
+        └── bookings
+            ├── users
+            ├── booking_seats
+            │   └── seats
+            ├── booking_combos
+            │   └── combos
+            └── payments
+```
 
 ## Hướng dẫn cài đặt
 
