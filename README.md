@@ -106,11 +106,6 @@ cinemas
 
 ## Hướng dẫn 
 
-### Yêu cầu 
-- Node.js >= 18
-- Microsoft SQL Server Express + SSMS 22
-- Git
-
 ### Bước 1 — Clone repo
 
 ### Bước 2 — Tạo Database trên SSMS
@@ -185,9 +180,6 @@ ter2:
 cd client
 npm run dev
 ```
-
-# ✅ Web chay tai: http://localhost:3000
-
 
 ---
 
