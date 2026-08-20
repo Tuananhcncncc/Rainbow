@@ -19,7 +19,6 @@ Hệ thống đặt vé xem phim trực tuyến — Movies. Moments. Memories.
 - Chọn ghế ngồi **realtime** — ghế người khác đang chọn tự động khoá (Socket.IO)
 - Chọn combo bắp nước
 - Thanh toán mô phỏng
-- Xem vé điện tử với **mã QR** — quét ra trang vé đẹp trên điện thoại
 - Lịch sử đặt vé cá nhân
 
 ### Admin
